@@ -17,6 +17,7 @@ export default {
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
+    '~/assets/sass/style.scss',    
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
@@ -29,19 +30,33 @@ export default {
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
+    '@nuxtjs/tailwindcss',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    // 'nuxt-socket-io',
+    '@nuxtjs/axios',
+    '@nuxtjs/pwa',
+    'nuxt-socket-io',
+    '@nuxtjs/google-fonts',
   ],
+  googleFonts: {
+    families: {
 
-  // io: {
-  //   // module options
-  //   sockets: [{
-  //     url: 'http://localhost:3000'
-  //   }]
-  // },
+      'Open+Sans': {
+        wght: [300, 400, 500, 600, 700],
+
+      },
+    }
+  },
+
+
+  io: {
+    // module options
+    sockets: [{
+      url: 'https://virtual-visite-oskawa.herokuapp.com'
+    }]
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {

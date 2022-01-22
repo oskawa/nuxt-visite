@@ -1,0 +1,14 @@
+h1, h2,h3, p{
+    font-family: 'Open Sans', sans-serif;
+    color: #edecec;
+}
+
+.btn-stroke{
+    border: 1px solid #edecec;
+    padding: 0.5rem 1rem;
+    color: #edecec;
+    &:hover{
+        color: rgb(15 23 42);
+        background-color: #edecec;
+    }
+}

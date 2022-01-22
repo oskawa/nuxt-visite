@@ -4,15 +4,15 @@ const server = require('http').createServer(app)
 express.json()
 express.urlencoded({extended: true})
 
-// const options = {
-//   cors: {
-//     origin: "http://localhost:3000",
-//     credentials: true
-//   }
-// };
-// const io = require('socket.io')(server, options)
+const options = {
+  cors: {
+    origin: "https://virtual-visite-oskawa.herokuapp.com",
+    credentials: true
+  }
+};
+const io = require('socket.io')(server, options)
 
-const io = require('socket.io')(server)
+// const io = require('socket.io')(server)
 
 io.on('connection', socket => {
 
